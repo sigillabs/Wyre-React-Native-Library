@@ -38,6 +38,7 @@ class WyreVerification extends Component {
   }
 
   render() {
+    const MyButton = this.props.myButton;
     const apiKey  = this.props.apiKey;
     const url = this.props.w3w.networkId === "1" ? "https://verify.sendwyre.com/?apiKey=" : "https://verify.testwyre.com/?apiKey="
     const buttonDisplay = !this.state.wyreIframeOpen ? "block" : "none"
@@ -45,12 +46,10 @@ class WyreVerification extends Component {
 
     return (
     <div id="wyre-div" style={{height: "570px"}}>
-      <button
+      <MyButton
         style={{ display: buttonDisplay }}
         onClick={() => { this.setState({wyreIframeOpen: true}); }}
-      >
-        Open Wyre
-      </button>
+      />
       <Iframe
         url={url + apiKey}
         display={display}
