@@ -1,6 +1,6 @@
 This is the React.js component for Wyre Verification.
 
-##Installation
+## Installation
 
 `npm install wyre-react-library`
 
