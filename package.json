@@ -1,0 +1,23 @@
+{
+  "name": "wyre-react-library",
+  "version": "1.0.0",
+  "description": "A React Library for Wyre Verification",
+  "main": "WyreVerification.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sendwyre/Wyre-React-Library.git"
+  },
+  "author": "HydroAndy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sendwyre/Wyre-React-Library/issues"
+  },
+  "homepage": "https://github.com/sendwyre/Wyre-React-Library#readme",
+  "dependencies": {
+    "react-iframe": "^1.3.2",
+    "web3-webpacked-react": "^1.0.10"
+  }
+}
