@@ -1,8 +1,8 @@
 {
   "name": "wyre-react-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React Library for Wyre Verification",
-  "main": "WyreVerification.js",
+  "main": "lib/WyreVerification.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,14 @@
   },
   "homepage": "https://github.com/sendwyre/Wyre-React-Library#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "react-iframe": "^1.3.2",
     "web3-webpacked-react": "^1.0.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0"
   }
 }
