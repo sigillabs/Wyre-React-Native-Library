@@ -1,8 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-  // devtool: 'source-map',
-  devtool: 'none',
+  devtool: 'source-map',
   entry: {
     index: './src/WyreVerification.js',
     text: './src/InjectedText.js'
