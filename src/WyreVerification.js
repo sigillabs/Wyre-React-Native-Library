@@ -1,18 +1,10 @@
 import * as PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Text, TouchableOpacity, View, WebView } from 'react-native';
-// import Web3Webview from 'react-native-web3-webview';
+import text from '../dist/script.txt';
 
 export default class WyreVerification extends Component {
-  componentDidMount() {
-    // window.web3 = new Web3({
-    //   sendAsync: function(payload, cb) {
-    //     postMessage('here');
-    //   }
-    // });postMessage('here1');
-    const js = `postMessage(typeof window.web3);`;
-    this.webview.injectJavaScript(js);
-  }
+  componentDidMount() {}
 
   render() {
     const { apiKey, networkId } = this.props;
@@ -26,17 +18,14 @@ export default class WyreVerification extends Component {
       <WebView
         {...this.props}
         ref={ref => (this.webview = ref)}
-        // injectedJavaScript={`postMessage(typeof window.web3);`}
+        injectedJavaScript={text}
         onMessage={e => {
           console.warn(e);
         }}
-        // onLoadStart={err => console.warn('Start')}
-        // onLoad={err => console.warn('loaded')}
-        // onLoadEnd={err => console.warn('Finished')}
-        // onError={err => console.warn(err)}
         source={{ uri }}
         originWhitelist={['*']}
         useWebKit={true}
+        {...this.props}
       />
     );
   }
@@ -44,6 +33,5 @@ export default class WyreVerification extends Component {
 
 WyreVerification.propTypes = {
   networkId: PropTypes.number.isRequired,
-  apiKey: PropTypes.string.isRequired,
-  web3: PropTypes.object.isRequired
+  apiKey: PropTypes.string.isRequired
 };

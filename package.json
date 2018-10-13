@@ -2,7 +2,12 @@
   "name": "wyre-react-native-library",
   "version": "1.0.2",
   "description": "A React Native Library for Wyre Verification",
-  "main": "src/WyreVerification.js",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "npm run build:library && npm run build:main",
+    "build:library": "webpack --config webpack.library.js --progress",
+    "build:main": "webpack --config webpack.config.js --progress"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sigillabs/Wyre-React-Native-Library.git"
@@ -14,10 +19,21 @@
   },
   "homepage": "https://github.com/sigillabs/Wyre-React-Native-Library#readme",
   "dependencies": {
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "web3": "^1.0.0-beta.36"
   },
   "peerDependencies": {
     "react": "16.3.1",
     "react-native": "^0.57.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "raw-loader": "^0.5.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   }
 }
